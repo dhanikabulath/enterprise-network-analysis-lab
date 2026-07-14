@@ -1,21 +1,21 @@
-# Project 01 - Wireshark Fundamentals
+# Project 02 - TCP Connection Analysis
 
 ## Overview
 
-This project introduces the fundamentals of network packet analysis using Wireshark. It covers packet capture, protocol filtering, packet inspection, TCP stream analysis, and network statistics commonly used by IT Support Engineers and Security Operations (SOC) analysts.
+This project focuses on analyzing the Transmission Control Protocol (TCP) using Wireshark. It demonstrates how TCP connections are established, maintained, and terminated while investigating common troubleshooting indicators used by IT Support Engineers, Network Administrators, and Security Operations Center (SOC) analysts.
 
 ---
 
 # Objectives
 
-- Install and configure Wireshark
-- Capture live network traffic
-- Apply protocol display filters
-- Inspect packet structure
-- Analyze TCP streams
-- Review protocol hierarchy
-- Examine network conversations
-- Identify network endpoints
+- Capture TCP traffic
+- Analyze the TCP three-way handshake
+- Inspect TCP header fields
+- Analyze TCP connection termination
+- Investigate TCP Reset (RST) packets
+- Analyze retransmissions
+- Review duplicate acknowledgments
+- Visualize TCP communication using stream graphs
 
 ---
 
@@ -23,149 +23,151 @@ This project introduces the fundamentals of network packet analysis using Wiresh
 
 | Component | Configuration |
 |-----------|---------------|
-| Client | Windows 11 Pro |
+| Operating System | Windows 11 Pro |
 | Analysis Tool | Wireshark |
 | Capture Format | PCAPNG |
 | Network | Home Lab |
 
 ---
 
-# Lab 1 – Wireshark Installation
+# Project Structure
 
-Verified Wireshark installation and available capture interfaces.
-
-### Screenshot
-
-![Wireshark Main Window](Screenshots/01_Wireshark_Main_Window.png)
+```text
+02-TCP-Connection-Analysis
+│
+├── Captures
+├── Notes
+├── Screenshots
+└── README.MD
+```
 
 ---
 
-# Lab 2 – First Packet Capture
+# Lab 1 – TCP Packet Capture
 
-Captured live network traffic and saved the capture for analysis.
+Captured TCP traffic generated during normal web browsing.
 
 ### Capture
 
-`Captures/first_capture.pcapng`
+`Captures/tcp_connection_capture.pcapng`
 
 ### Screenshot
 
-![First Capture](Screenshots/02_First_Capture.png)
+![TCP Capture](Screenshots/01_TCP_Capture.png)
 
 ---
 
-# Lab 3 – Wireshark Interface
+# Lab 2 – TCP Three-Way Handshake
 
-Reviewed:
+Analyzed TCP connection establishment by identifying:
 
-- Packet List
-- Packet Details
-- Packet Bytes
+- SYN
+- SYN, ACK
+- ACK
 
 ### Screenshot
 
-![Wireshark Interface](Screenshots/03_Wireshark_Interface.png)
+![TCP Three Way Handshake](Screenshots/02_TCP_Three_Way_Handshake.png)
 
 ---
 
-# Lab 4 – Display Filters
+# Lab 3 – TCP Header Analysis
 
-### DNS
+Inspected the TCP header and reviewed:
 
-![DNS Filter](Screenshots/04_DNS_Filter.png)
-
-### TCP
-
-![TCP Filter](Screenshots/05_TCP_Filter.png)
-
-### UDP
-
-![UDP Filter](Screenshots/06_UDP_Filter.png)
-
-### ICMP
-
-![ICMP Filter](Screenshots/07_ICMP_Filter.png)
-
----
-
-# Lab 5 – DNS Packet Analysis
-
-Reviewed:
-
-- Ethernet II
-- IPv4
-- UDP
-- DNS
+- Source Port
+- Destination Port
+- Sequence Number
+- Acknowledgment Number
+- Window Size
+- TCP Flags
+- Checksum
 
 ### Screenshot
 
-![DNS Packet Details](Screenshots/08_DNS_Packet_Details.png)
+![TCP Header](Screenshots/03_TCP_Header.png)
 
 ---
 
-# Lab 6 – Packet Bytes
+# Lab 4 – TCP Connection Termination
+
+Observed graceful TCP connection termination using FIN and ACK packets.
 
 ### Screenshot
 
-![Packet Bytes](Screenshots/09_Packet_Bytes.png)
+![TCP FIN ACK](Screenshots/04_TCP_FIN_ACK.png)
 
 ---
 
-# Lab 7 – TCP Stream Analysis
+# Lab 5 – TCP Reset Analysis
+
+Applied a display filter to identify TCP Reset (RST) packets.
+
+No TCP Reset packets were observed during this capture, indicating normal TCP communication.
 
 ### Screenshot
 
-![TCP Stream](Screenshots/10_TCP_Stream.png)
+![TCP RST](Screenshots/05_TCP_RST.png)
 
 ---
 
-# Lab 8 – Protocol Hierarchy
+# Lab 6 – TCP Retransmission Analysis
+
+Applied retransmission analysis filters.
+
+No retransmissions were observed during this capture, indicating a stable network connection.
 
 ### Screenshot
 
-![Protocol Hierarchy](Screenshots/11_Protocol_Hierarchy.png)
+![TCP Retransmission](Screenshots/06_TCP_Retransmission.png)
 
 ---
 
-# Lab 9 – Conversations
+# Lab 7 – Duplicate ACK Analysis
+
+Applied duplicate acknowledgment filters.
+
+No duplicate ACK packets were observed during this capture.
 
 ### Screenshot
 
-![Conversations](Screenshots/12_Conversations.png)
+![Duplicate ACK](Screenshots/07_Duplicate_ACK.png)
 
 ---
 
-# Lab 10 – Endpoints
+# Lab 8 – TCP Stream Graph Analysis
+
+Reviewed TCP communication using Wireshark TCP Stream Graphs.
 
 ### Screenshot
 
-![Endpoints](Screenshots/13_Endpoints.png)
+![TCP Stream Graph](Screenshots/08_TCP_Stream_Graph.png)
 
 ---
 
 # Skills Demonstrated
 
-- Packet Capture
-- Packet Analysis
-- DNS Analysis
-- TCP Analysis
-- UDP Analysis
-- ICMP Analysis
+- TCP Packet Capture
+- TCP Three-Way Handshake Analysis
+- TCP Header Analysis
+- TCP Connection Termination
+- TCP Reset Analysis
+- TCP Retransmission Analysis
+- Duplicate ACK Analysis
 - TCP Stream Analysis
-- Protocol Analysis
-- Network Diagnostics
-- Endpoint Identification
+- Wireshark Filtering
+- Enterprise Network Troubleshooting
 
 ---
 
 # Lessons Learned
 
-This project established a strong foundation in packet capture and protocol analysis using Wireshark. The techniques demonstrated throughout this project form the basis for troubleshooting enterprise network connectivity issues and support the advanced network analysis projects that follow.
+This project provided practical experience analyzing TCP communication using Wireshark. Understanding connection establishment, packet structure, and TCP behavior is fundamental for troubleshooting enterprise network issues and forms a core networking skill for IT Support Engineers, Network Administrators, and future Security Operations (SOC) professionals.
 
 ---
 
 # Next Project
 
-## Project 02 – TCP Connection Analysis
+## Project 03 – DNS Traffic Analysis
 
-Analyze TCP connection establishment, header fields, connection termination, retransmissions, duplicate acknowledgments, and stream behavior using Wireshark.
+The next project focuses on analyzing DNS queries and responses, DNS record types, name resolution, recursive lookups, and troubleshooting DNS-related connectivity issues using Wireshark.
