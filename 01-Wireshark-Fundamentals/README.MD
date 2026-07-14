@@ -2,9 +2,7 @@
 
 ## Overview
 
-This project introduces the fundamentals of network packet analysis using Wireshark. It covers packet capture, protocol filtering, packet inspection, TCP stream analysis, and network statistics commonly used by IT Support Engineers and Security Operations (SOC) analysts.
-
-The project demonstrates practical experience in capturing and analyzing enterprise network traffic using Wireshark.
+This project introduces the fundamentals of network packet analysis using Wireshark. It demonstrates how to capture, inspect, and analyze network traffic using industry-standard techniques commonly used by IT Support Engineers, System Administrators, Network Engineers, and Security Operations Center (SOC) analysts.
 
 ---
 
@@ -12,12 +10,13 @@ The project demonstrates practical experience in capturing and analyzing enterpr
 
 - Install and configure Wireshark
 - Capture live network traffic
-- Apply protocol display filters
+- Apply display filters
 - Inspect packet structure
-- Analyze TCP streams
+- Analyze DNS traffic
+- Analyze TCP, UDP and ICMP packets
+- Follow TCP streams
 - Review protocol hierarchy
-- Examine network conversations
-- Identify network endpoints
+- Analyze conversations and endpoints
 
 ---
 
@@ -25,10 +24,23 @@ The project demonstrates practical experience in capturing and analyzing enterpr
 
 | Component | Configuration |
 |-----------|---------------|
-| Client | Windows 11 Pro |
+| Operating System | Windows 11 Pro |
 | Analysis Tool | Wireshark |
 | Capture Format | PCAPNG |
 | Network | Home Lab |
+
+---
+
+# Project Structure
+
+```text
+01-Wireshark-Fundamentals
+│
+├── Captures
+├── Notes
+├── Screenshots
+└── README.MD
+```
 
 ---
 
@@ -36,134 +48,124 @@ The project demonstrates practical experience in capturing and analyzing enterpr
 
 Verified Wireshark installation and available capture interfaces.
 
-**Screenshot**
+### Screenshot
 
-- 01_Wireshark_Main_Window.png
+![Wireshark Main Window](Screenshots/01_Wireshark_Main_Window.png)
 
 ---
 
 # Lab 2 – First Packet Capture
 
-Captured live network traffic and saved the capture for analysis.
+Captured live network traffic for later analysis.
 
-**Capture**
+### Capture
 
-- first_capture.pcapng
+`Captures/first_capture.pcapng`
 
-**Screenshot**
+### Screenshot
 
-- 02_First_Capture.png
+![First Capture](Screenshots/02_First_Capture.png)
 
 ---
 
 # Lab 3 – Wireshark Interface
 
-Reviewed:
+Reviewed the three primary Wireshark panes:
 
 - Packet List
 - Packet Details
 - Packet Bytes
 
-**Screenshot**
+### Screenshot
 
-- 03_Wireshark_Interface.png
+![Wireshark Interface](Screenshots/03_Wireshark_Interface.png)
 
 ---
 
 # Lab 4 – Display Filters
 
-Applied filters for:
+Applied common protocol filters.
 
-- DNS
-- TCP
-- UDP
-- ICMP
+## DNS
 
-**Screenshots**
+![DNS Filter](Screenshots/04_DNS_Filter.png)
 
-- 04_DNS_Filter.png
-- 05_TCP_Filter.png
-- 06_UDP_Filter.png
-- 07_ICMP_Filter.png
+## TCP
 
----
+![TCP Filter](Screenshots/05_TCP_Filter.png)
 
-# Lab 5 – ICMP Traffic
+## UDP
 
-Generated ICMP traffic using:
+![UDP Filter](Screenshots/06_UDP_Filter.png)
 
-```cmd
-ping 8.8.8.8
-```
+## ICMP
 
-Saved:
-
-- icmp_capture.pcapng
+![ICMP Filter](Screenshots/07_ICMP_Filter.png)
 
 ---
 
-# Lab 6 – DNS Packet Analysis
+# Lab 5 – DNS Packet Analysis
 
-Inspected:
+Inspected a DNS query by expanding:
 
 - Ethernet II
 - IPv4
 - UDP
 - DNS
 
-**Screenshot**
+### Screenshot
 
-- 08_DNS_Packet_Details.png
-
----
-
-# Lab 7 – Packet Bytes
-
-Reviewed hexadecimal packet contents.
-
-**Screenshot**
-
-- 09_Packet_Bytes.png
+![DNS Packet Details](Screenshots/08_DNS_Packet_Details.png)
 
 ---
 
-# Lab 8 – TCP Stream Analysis
+# Lab 6 – Packet Bytes
+
+Reviewed the hexadecimal and ASCII representation of the selected packet.
+
+### Screenshot
+
+![Packet Bytes](Screenshots/09_Packet_Bytes.png)
+
+---
+
+# Lab 7 – TCP Stream Analysis
 
 Followed an entire TCP conversation between client and server.
 
-**Screenshot**
+### Screenshot
 
-- 10_TCP_Stream.png
-
----
-
-# Lab 9 – Protocol Hierarchy
-
-Reviewed protocol distribution within the capture.
-
-**Screenshot**
-
-- 11_Protocol_Hierarchy.png
+![TCP Stream](Screenshots/10_TCP_Stream.png)
 
 ---
 
-# Lab 10 – Conversations
+# Lab 8 – Protocol Hierarchy
 
-Analyzed communication sessions.
+Reviewed captured protocol distribution.
 
-**Screenshot**
+### Screenshot
 
-- 12_Conversations.png
+![Protocol Hierarchy](Screenshots/11_Protocol_Hierarchy.png)
 
 ---
 
-# Lab 11 – Endpoints
+# Lab 9 – Conversations
 
-Reviewed participating IP and MAC addresses.
+Reviewed network conversations generated during the capture.
 
-**Screenshot**
+### Screenshot
 
-- 13_Endpoints.png
+![Conversations](Screenshots/12_Conversations.png)
+
+---
+
+# Lab 10 – Endpoints
+
+Reviewed participating network endpoints.
+
+### Screenshot
+
+![Endpoints](Screenshots/13_Endpoints.png)
 
 ---
 
@@ -171,26 +173,27 @@ Reviewed participating IP and MAC addresses.
 
 - Packet Capture
 - Packet Inspection
-- Protocol Analysis
+- Protocol Filtering
 - DNS Analysis
 - TCP Analysis
 - UDP Analysis
 - ICMP Analysis
 - TCP Stream Analysis
-- Network Statistics
-- Endpoint Identification
-- Enterprise Network Troubleshooting
+- Protocol Hierarchy Analysis
+- Conversation Analysis
+- Endpoint Analysis
+- Network Troubleshooting
 
 ---
 
 # Lessons Learned
 
-This project establishes the foundation for enterprise network troubleshooting by demonstrating how to capture, inspect, and interpret network traffic using Wireshark. These skills are fundamental for diagnosing connectivity issues, understanding protocol behavior, and supporting enterprise IT environments.
+This project established a strong foundation in packet capture and protocol analysis using Wireshark. Understanding how network traffic flows and how to inspect individual packets is a fundamental skill for enterprise IT Support, networking, and Security Operations (SOC) roles.
 
 ---
 
 # Next Project
 
-## Project 02 - TCP Connection Analysis
+## Project 02 – TCP Connection Analysis
 
-Analyze the complete TCP connection lifecycle, including the three-way handshake, connection termination, retransmissions, and common TCP troubleshooting scenarios.
+The next project focuses on analyzing TCP connection establishment, TCP header fields, connection termination, retransmissions, duplicate acknowledgments, and TCP stream behavior using Wireshark.
