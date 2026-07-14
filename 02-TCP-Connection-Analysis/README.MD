@@ -42,7 +42,7 @@ Captured TCP traffic generated during web browsing.
 
 **Screenshot**
 
-- 01_TCP_Capture.png
+- /Screenshots/01_TCP_Capture.png
 
 ---
 
@@ -56,7 +56,7 @@ Analyzed TCP connection establishment by identifying:
 
 **Screenshot**
 
-- 02_TCP_Three_Way_Handshake.png
+- /Screenshots/02_TCP_Three_Way_Handshake.png
 
 ---
 
@@ -74,7 +74,7 @@ Inspected the TCP header and reviewed:
 
 **Screenshot**
 
-- 03_TCP_Header.png
+- /Screenshots/03_TCP_Header.png
 
 ---
 
@@ -84,7 +84,7 @@ Observed normal TCP connection termination using FIN and ACK packets.
 
 **Screenshot**
 
-- 04_TCP_FIN_ACK.png
+- /Screenshots/04_TCP_FIN_ACK.png
 
 ---
 
@@ -96,7 +96,7 @@ No TCP reset packets were observed during this capture, indicating normal connec
 
 **Screenshot**
 
-- 05_TCP_RST.png
+- /Screenshots/5_TCP_RST.png
 
 ---
 
@@ -108,7 +108,7 @@ No retransmissions were observed during this capture, indicating stable network 
 
 **Screenshot**
 
-- 06_TCP_Retransmission.png
+- /Screenshots/06_TCP_Retransmission.png
 
 ---
 
@@ -120,7 +120,7 @@ No duplicate acknowledgments were detected during this capture.
 
 **Screenshot**
 
-- 07_Duplicate_ACK.png
+- /Screenshots/07_Duplicate_ACK.png
 
 ---
 
@@ -130,7 +130,7 @@ Reviewed TCP communication using Wireshark stream graphs.
 
 **Screenshot**
 
-- 08_TCP_Stream_Graph.png
+- /Screenshots/08_TCP_Stream_Graph.png
 
 ---
 
