@@ -4,7 +4,7 @@
 
 This project demonstrates how to analyze Domain Name System (DNS) traffic using Wireshark. It focuses on capturing DNS queries and responses, examining DNS record types, identifying DNS servers, and troubleshooting name resolution issues commonly encountered in enterprise environments.
 
-The project simulates a real-world IT Support scenario where users are unable to access websites due to DNS-related issues.
+The project simulates a real-world IT Support scenario where users report being unable to access websites by hostname.
 
 ---
 
@@ -12,7 +12,7 @@ The project simulates a real-world IT Support scenario where users are unable to
 
 > **A user reports that websites cannot be accessed by hostname, although Internet connectivity is available.**
 
-The objective is to verify whether DNS resolution is functioning correctly and identify the cause of the issue.
+The objective is to verify whether DNS resolution is functioning correctly by analyzing DNS traffic.
 
 ---
 
@@ -25,7 +25,7 @@ The objective is to verify whether DNS resolution is functioning correctly and i
 - Identify DNS record types
 - Review DNS conversations
 - Identify DNS endpoints
-- Perform DNS troubleshooting
+- Document DNS troubleshooting findings
 
 ---
 
@@ -55,7 +55,7 @@ The objective is to verify whether DNS resolution is functioning correctly and i
 
 # Lab 1 – DNS Packet Capture
 
-Generated DNS traffic using multiple **nslookup** queries.
+Generated DNS traffic using the `nslookup` command.
 
 ### Capture
 
@@ -69,7 +69,7 @@ Generated DNS traffic using multiple **nslookup** queries.
 
 # Lab 2 – DNS Display Filter
 
-Applied the Wireshark DNS display filter to isolate DNS traffic.
+Applied the DNS display filter to isolate DNS packets.
 
 Display Filter:
 
@@ -104,8 +104,8 @@ Inspected a DNS query packet and reviewed:
 Reviewed the DNS response and verified:
 
 - Response Code
-- Returned IP Address
 - Answer Count
+- Returned IP Address
 - Time To Live (TTL)
 
 ### Screenshot
@@ -116,13 +116,12 @@ Reviewed the DNS response and verified:
 
 # Lab 5 – DNS Record Types
 
-Reviewed DNS record types returned by the DNS server.
+Reviewed DNS resource records returned by the DNS server.
 
-Observed record types:
+Observed record types included:
 
 - A
 - AAAA
-- CNAME (if available)
 
 ### Screenshot
 
@@ -132,7 +131,7 @@ Observed record types:
 
 # Lab 6 – DNS Conversations
 
-Reviewed UDP conversations generated during DNS communication.
+Reviewed DNS communication between the client and DNS server using Wireshark Conversations.
 
 ### Screenshot
 
@@ -142,7 +141,7 @@ Reviewed UDP conversations generated during DNS communication.
 
 # Lab 7 – DNS Endpoints
 
-Reviewed the communicating client and DNS server endpoints.
+Reviewed the participating DNS client and server endpoints.
 
 ### Screenshot
 
@@ -152,15 +151,14 @@ Reviewed the communicating client and DNS server endpoints.
 
 # Lab 8 – DNS Troubleshooting Summary
 
-Documented DNS troubleshooting findings.
+Documented the DNS troubleshooting findings, including:
 
-Verified:
-
-- Client IP Address
-- DNS Server IP Address
+- Client
+- DNS Server
 - Queried Domains
-- Returned IP Addresses
-- DNS Resolution Status
+- Record Types
+- Resolution Status
+- Investigation Summary
 
 ---
 
@@ -170,7 +168,7 @@ Verified:
 - DNS Query Analysis
 - DNS Response Analysis
 - DNS Record Identification
-- UDP Packet Analysis
+- UDP Traffic Analysis
 - Wireshark Display Filters
 - DNS Troubleshooting
 - Enterprise Network Diagnostics
@@ -179,7 +177,7 @@ Verified:
 
 # Lessons Learned
 
-This project provided practical experience analyzing DNS communication using Wireshark. Understanding DNS queries, responses, and record types is essential for diagnosing name resolution issues encountered in enterprise IT environments. These skills are fundamental for IT Support Engineers, Network Administrators, and Security Operations (SOC) analysts.
+This project provided practical experience analyzing DNS communication using Wireshark. Understanding DNS queries, responses, record types, and endpoint communication is essential for diagnosing name resolution issues in enterprise environments. These skills are fundamental for IT Support Engineers, Network Administrators, and Security Operations (SOC) analysts.
 
 ---
 
@@ -187,4 +185,4 @@ This project provided practical experience analyzing DNS communication using Wir
 
 ## Project 04 – DHCP Traffic Analysis
 
-The next project focuses on analyzing DHCP Discover, Offer, Request, and Acknowledgment (DORA) messages to understand how IP addresses are dynamically assigned within enterprise networks.
+The next project focuses on analyzing the DHCP DORA process (Discover, Offer, Request, Acknowledge) to understand how clients dynamically obtain IP configuration within enterprise networks.
